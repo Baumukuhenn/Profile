@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自己紹介テンプレート</title>
+</head>
+<body>
+    <h1>自己紹介</h1><br/>
+    <h2 id="base">名前と出身地</h2>
+    <div>
+        名前：松田航
+        出身地：東京
+    </div>
+
+    <h2 id="like">好きなこと</h2>
+    <div>
+        マーベル映画が好きです。<br/>
+        <img src="nick-fury_W56rkjD.png"  width="300"onclick="image_change(this)">
+    </div>
+
+</body>
+</html>
+
+<style>
+    h1{
+        text-align:center;
+        color:black;
+        background-color:powderblue;
+        text-decoration-line:underline;
+    }
+    h2  {
+        text-align:center;
+        color:white;
+        background-color:black;
+        text-decoration-line:underline;
+    }
+    #base{
+        text-align:center;
+        color:black;
+        background-color:aquamarine;
+    }
+    #like{
+        text-align:center;
+        color:black;
+        background-color:aqua;
+    }
+    img{
+        text-align: center;
+        margin:0 auto;
+        position:relative;
+        animation:anime1 1s ease;
+    }
+    @keyframes anime1{
+        0%{
+            opacity:0;
+            top:100px;
+        }
+        100%{
+            opacity:1;
+            top:0;
+        }
+    }
+</style>
+
+<script>
+    function image_change(obj){
+        //画像ファイルを取得して保持する
+        var arr = ['unnamed.jpg', 'nick-fury_W56rkjD.png','captainmarvel.jpeg','92807013.jpg.webp'];
+        //ランダムで画像ファイルを取得して表示する処理
+        var index = Math.floor(Math.random() * arr.length);
+        obj.src = arr[index];    
+    }
+</script>
+
+
